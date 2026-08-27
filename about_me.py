@@ -14,7 +14,7 @@ job = "Aerospace Engineering Intern"
 reason_to_learn = '"I want to touch up on my code so that I can get a full-time job as a Software Engineer"'
 fun_fact = "I love performing in operas, musicals, and plays."
 
-# print()
+# Printing
 
 print(f"Name:       ", first_name, last_name)
 print(f"Age:        ", age)
