@@ -31,11 +31,11 @@ if choose == 1:
 
 elif choose == 2:
     try:
-        remove_task = int(input("Remove a task (choose a number instead of typing the task, e.g. type 0 instead of 'Call Mom'): "))
+        remove_task = int(input("Remove a task (choose a number instead of typing the task, e.g. type 1 instead of 'Call Mom'): "))
     except ValueError:
         print("Sorry, but what you put was not an option. Exiting now.")
         exit()
-    to_do_list.pop(remove_task)
+    to_do_list.pop(remove_task-1)
     print(f"\n1. {to_do_list[0]} \n2. {to_do_list[1]}")
     new_length = len(to_do_list)
     print(f"\nTotal tasks: {new_length}")
