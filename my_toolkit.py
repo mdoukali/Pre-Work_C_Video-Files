@@ -2,7 +2,6 @@
 
 numbers = [88, 45, 92, 67, 73, 95, 81, 56, 78, 100, 62, 85, 90, 38, 71]
 
-# 
 
 def calculate_average(numbers):
     """Calculates the average from a set of numbers, then returns the average."""
@@ -15,6 +14,7 @@ def calculate_average(numbers):
         average = sum_numbers / len(numbers)
 
     return average
+
 
 def find_max_and_min(numbers):
     """Find the highest and lowest numbers from a set of numbers, then returns the maximum and minimum value."""
