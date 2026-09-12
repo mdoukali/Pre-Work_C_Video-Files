@@ -77,7 +77,7 @@ print("-- Add More Scores --")
 
 while True:
     # Enter a new score
-    enter_score = input("Enter a new score: ")
+    enter_score = input("Enter a new score (or 'done' to finish): ")
 
     # If the user enters "done" the program break
     if enter_score.lower() == "done":
