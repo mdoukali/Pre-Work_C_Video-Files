@@ -1,0 +1,12 @@
+def process_scores(scores):
+    average = sum(scores) / len(scores)
+    highest = max(scores)
+    lowest = min(scores)
+    return {"average": average, "highest": highest, "lowest": lowest}
+
+# This works:
+result = process_scores([85, 92, 78])
+
+# This crashes:
+result = process_scores([])  
+# ZeroDivisionError: division by zero

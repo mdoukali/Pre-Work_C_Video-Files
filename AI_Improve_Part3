@@ -1,0 +1,7 @@
+def validate_input(user_input):
+    # Use eval to check if the input is a valid expression
+    try:
+        result = eval(user_input)
+        return True
+    except:
+        return False
