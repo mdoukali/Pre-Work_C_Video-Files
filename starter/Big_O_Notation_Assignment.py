@@ -9,29 +9,45 @@
 # Function E: O(n). While accessing the first element would by O(1), finding the sum of a set of data would most likely be O(n) because you would have to loop through each item most likely and add it to a total.
 
 from collections import Counter
+import time 
+import random
 
-def count_pairs_nested(number, target):
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = 10
+
+def count_pairs_nested(data, target):
     """O(n^2)"""
 
     count = 0
 
-    n = len(number)
+    n = len(data)
 
     for i in range(n):
         for j in range(i + 1, n):
-            if number[i] + number[j] == target:
+            if data[i] + data[j] == target:
                 count += 1
 
     return count
 
-def count_pairs_set(number, target):
+def count_pairs_set(data, target):
     """O(n)"""
 
     s = Counter()
     count = 0
 
-    for item in number:
+    for item in data:
         count += s[target - item]
         s[item] += 1
     
     return count
+
+def benchmark(number):
+    """Time how long a function takes to run."""
+    start = time.time()
+    end = time.time()
+    return end - start
+
+t_nested = benchmark(count_pairs_nested(data, target))
+t_set = benchmark(count_pairs_set(data, target))
+
+print(f"Nested = {t_nested:.8f}s    |   Set = {t_set:.8f}s")
